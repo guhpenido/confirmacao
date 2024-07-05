@@ -1,37 +1,46 @@
-// src/Admin.tsx
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getFirestore, collection, getDocs } from "firebase/firestore"; 
 import { initializeApp } from "firebase/app";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDhRhWIiU7fWyQuVioN4xj4RfKSKvo3OJo",
-  authDomain: "presenca-1399f.firebaseapp.com",
-  projectId: "presenca-1399f",
-  storageBucket: "presenca-1399f.appspot.com",
-  messagingSenderId: "416958968897",
-  appId: "1:416958968897:web:8c429416d087125e7f82c0"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+    apiKey: "AIzaSyDhRhWIiU7fWyQuVioN4xj4RfKSKvo3OJo",
+    authDomain: "presenca-1399f.firebaseapp.com",
+    projectId: "presenca-1399f",
+    storageBucket: "presenca-1399f.appspot.com",
+    messagingSenderId: "416958968897",
+    appId: "1:416958968897:web:8c429416d087125e7f82c0"
+  };
 
 const Admin = () => {
-  const [names, setNames] = useState([]);
+  const [names, setNames] = useState<string[]>([]);
 
   useEffect(() => {
+    // Initialize Firebase and Firestore
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
     const fetchData = async () => {
-      const querySnapshot = await getDocs(collection(db, "confirmacao"));
-      const data = querySnapshot.docs.flatMap(doc => {
-        const confirmation = doc.data();
-        return [confirmation.nome1, confirmation.nome2, confirmation.nome3, confirmation.nome4, confirmation.nome5].filter(Boolean);
-      });
-      setNames(data);
+      try {
+        const querySnapshot = await getDocs(collection(db, "confirmacao"));
+        const data = querySnapshot.docs.flatMap(doc => {
+          const confirmation = doc.data();
+          return [confirmation.nome1, confirmation.nome2, confirmation.nome3, confirmation.nome4, confirmation.nome5].filter(Boolean);
+        });
+        setNames(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        // Handle error state or display a message to the user
+      }
     };
 
     fetchData();
-  }, []);
+
+    // Clean up Firebase resources (optional)
+    // return () => {
+    //   // Optional cleanup logic here
+    // };
+
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   return (
     <div>

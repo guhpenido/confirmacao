@@ -1,7 +1,5 @@
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import penido from "./assets/penido_png.png";
 import faz from "./assets/penido_faz.png";
 import "./App.css";
@@ -24,7 +22,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 function App() {
-  const [count, setCount] = useState(0);
   const [showMore, setShowMore] = useState(false);
   const [formData, setFormData] = useState({
     nome1: "",
@@ -35,20 +32,21 @@ function App() {
   });
   const navigate = useNavigate();
 
-  const handleShowMore = (event) => {
+  const handleShowMore = (event: { preventDefault: () => void; }) => {
     event.preventDefault();
     setShowMore(true);
   };
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
+  
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (formData.nome1.trim() === "") {
       alert("O campo Nome não pode estar vazio.");
