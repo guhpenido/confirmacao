@@ -1,7 +1,7 @@
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import penido from "./assets/penido_png.png";
-import faz from "./assets/penido_faz.png";
+import foto from "./assets/marcelo_foto.png";
+import faz from "./assets/marcelo.png";
 import "./App.css";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -64,7 +64,7 @@ function App() {
     <>
       <div>
         <a href="#">
-          <img src={penido} className="logo" alt="Vite logo" />
+          <img src={foto} className="logo" alt="Vite logo" />
         </a>
       </div>
       <div>
@@ -73,12 +73,12 @@ function App() {
         </a>
       </div>
       <h2>
-        📅 19/07/2024 🕢 19h{" "}
+        📅 28/09/2024 🕢 19h{" "}
         <a
-          href="https://www.google.com.br/maps/place/Fil%C3%A9/@-19.8716175,-43.9897098,17z/data=!3m1!4b1!4m6!3m5!1s0xa6911bfaf63b41:0x6b030d737dbcfb47!8m2!3d-19.8716226!4d-43.9871349!16s%2Fg%2F11b_1rgr44?entry=ttu"
+          href="https://www.google.com.br/maps/place/R.+Dr.+J%C3%BAlio+Ribeiro,+70+-+Industrial+Itau,+Contagem+-+MG,+32223-390/@-19.9672791,-44.0385526,17z/data=!3m1!4b1!4m6!3m5!1s0xa6be171c10681f:0xcb3391ed20fff656!8m2!3d-19.9672842!4d-44.0359777!16s%2Fg%2F11c4mvx43w?entry=ttu&g_ep=EgoyMDI0MDkwOC4wIKXMDSoASAFQAw%3D%3D"
           target="_blank"
         >
-          📌 Av. Fleming, 271 - Ouro Preto, BH (Filé)
+          📌 Rua Doutor Júlio Ribeiro, 70 - Industrial Itaú
         </a>
       </h2>
       <h1>Confirmação de presença</h1>
@@ -146,7 +146,7 @@ function App() {
             Confirmar presença!
           </button>
         </form>
-        <p>Confirme presença até dia 15/07/2024.</p>
+        <p>Confirme presença até dia 20/09/2024.</p>
       </div>
     </>
   );
