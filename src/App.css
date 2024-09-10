@@ -70,7 +70,7 @@
 }
 
 #confirmarPresenca{
-  background-color: deeppink;
+  background-color: rgb(168, 101, 0);
 }
 #confirmarPresenca:hover{
   transform: scale(1.02);
