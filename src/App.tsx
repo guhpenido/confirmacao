@@ -1,7 +1,7 @@
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import foto from "./assets/marcelo_foto.png";
-import faz from "./assets/marcelo.png";
+import foto from "./assets/duda_foto.png";
+import faz from "./assets/duda_23.png";
 import "./App.css";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -73,12 +73,12 @@ function App() {
         </a>
       </div>
       <h2>
-        📅 28/09/2024 🕢 19h{" "}
+        📅 01/11/2024 🕢 19h{" "}
         <a
-          href="https://www.google.com.br/maps/place/R.+Dr.+J%C3%BAlio+Ribeiro,+70+-+Industrial+Itau,+Contagem+-+MG,+32223-390/@-19.9672791,-44.0385526,17z/data=!3m1!4b1!4m6!3m5!1s0xa6be171c10681f:0xcb3391ed20fff656!8m2!3d-19.9672842!4d-44.0359777!16s%2Fg%2F11c4mvx43w?entry=ttu&g_ep=EgoyMDI0MDkwOC4wIKXMDSoASAFQAw%3D%3D"
+          href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzEzM2owajeoAgCwAgA&um=1&ie=UTF-8&fb=1&gl=br&sa=X&geocode=Kccsw0gKv6YAMZMqA86fNaXn&daddr=R.+Alamanda,+170+-+Lind%C3%A9ia,+Belo+Horizonte+-+MG,+30690-660"
           target="_blank"
         >
-          📌 Rua Doutor Júlio Ribeiro, 70 - Industrial Itaú
+          📌 BISTRÔ Garagem do Gunda - R. Alamanda, 170 - Lindéia
         </a>
       </h2>
       <h1>Confirmação de presença</h1>
@@ -146,7 +146,7 @@ function App() {
             Confirmar presença!
           </button>
         </form>
-        <p>Confirme presença até dia 20/09/2024.</p>
+        <p>Confirme presença até dia 26/10/2024.</p>
       </div>
     </>
   );

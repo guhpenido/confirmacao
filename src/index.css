@@ -5,13 +5,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: rgb(100, 64, 41);
-  background: linear-gradient(
-    180deg,
-    rgba(100, 64, 41, 1) 0%,
-    rgba(143, 64, 20, 1) 61%,
-    rgba(143, 64, 20, 1) 93%
-  );
+  background: rgb(252,188,207);
+  background: radial-gradient(circle, rgba(252,188,207,1) 0%, rgba(255,207,207,1) 76%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,7 +16,7 @@
 
 a {
   text-decoration: inherit;
-  color: #fff;
+  color: #6f8775;
 }
 a:hover {
   color: #ff0000;
@@ -38,6 +33,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: #6f8775;
 }
 
 button {
@@ -68,7 +64,7 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #6f8775;
   }
 }
 table {
@@ -94,4 +90,18 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #535353;
+}
+
+h2{
+  color: #6f8775;
+}
+label{
+  color: #6f8775;
+}
+
+#maispessoas{
+  color: #6f8775;
+}
+p{
+  color: #6f8775;
 }

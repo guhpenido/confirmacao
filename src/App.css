@@ -47,7 +47,7 @@
 }
 
 .nome{
-  background-color: #fff;
+  background-color: #6f8775;
   height: 2em;
   border: none;
   border-radius: 15px;
@@ -70,7 +70,7 @@
 }
 
 #confirmarPresenca{
-  background-color: rgb(168, 101, 0);
+  background: #6f8775;
 }
 #confirmarPresenca:hover{
   transform: scale(1.02);
